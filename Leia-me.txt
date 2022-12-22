@@ -28,3 +28,5 @@ Primeira parte do prejeto consistiu em criar as classe que irão virar as tabelas
 	ter o contato com o BD.
 	ALém disso criei os repositórios concretos, herdade do repocitório base concreto e de IRepositorio{Respectivo}
 	Caso você precisa de alguma bisca mais específica em cada classe, essa consulta será feita em cada repositório concreto.
+
+	Install-Package AutoMapper

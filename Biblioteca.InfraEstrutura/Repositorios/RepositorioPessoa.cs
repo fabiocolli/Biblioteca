@@ -7,17 +7,26 @@ namespace Biblioteca.Infra.Dados.Repositorios
     {
         public IEnumerable<Pessoa> BuscarPessoaComAniversarioHoje()
         {
-            throw new NotImplementedException();
+            return _db.Pessoas
+                .AsNoTracking()
+                .ToList()
+                .Where(p => p.Nascimento.Day == DateTime.Now.Day);
         }
 
         public IEnumerable<Pessoa> BuscarPessoasAtivas()
         {
-            throw new NotImplementedException();
+            return _db.Pessoas
+                .AsNoTracking()
+                .ToList()
+                .Where(p => p.Ativo);
         }
 
         public IEnumerable<Pessoa> BuscarPorNome(string nomePessoa)
         {
-            throw new NotImplementedException();
+            return _db.Pessoas
+                .AsNoTracking()
+                .ToList()
+                .Where(p => p.Nome.Contains(nomePessoa));
         }
     }
 }
