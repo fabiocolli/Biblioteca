@@ -9,6 +9,7 @@
         public DateTime Nascimento { get; set; }
         public DateTime DtCadastro { get; set; }
         public bool Ativo { get; set; }
+        public virtual IEnumerable<ItemEmprestado> ItemEmprestados { get; set; } = new List<ItemEmprestado>();
 
         public bool PodeFazerEmprestimso(Pessoa pessoa)
         {

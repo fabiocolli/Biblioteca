@@ -3,9 +3,9 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace Biblioteca.Infra.Dados.ConfigEntidades
 {
-    public class PessoaConfiguracao: EntityTypeConfiguration<Pessoa>
+    public class ConfiguracaoPessoa: EntityTypeConfiguration<Pessoa>
     {
-        public PessoaConfiguracao()
+        public ConfiguracaoPessoa()
         {
             HasKey(p => p.Id);
 

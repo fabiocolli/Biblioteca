@@ -13,8 +13,7 @@
         public string NomeAutor { get; set; }
         public DateTime DtCadastro { get; set; }
         public EstadoLivro StatusLivro { get; set; }
-
-        //public virtual Pessoa Pessoa { get; set; }
+        public virtual IEnumerable<ItemEmprestado> ItemEmprestado { get; set; } = new List<ItemEmprestado>();
 
         public bool PodeSerEmprestado()
         {

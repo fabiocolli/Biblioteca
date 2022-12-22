@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Infra.Dados.ConfigEntidades
 {
-    public class LivroConfiguracao : EntityTypeConfiguration<Livro>
+    public class ConfiguracaoLivro : EntityTypeConfiguration<Livro>
     {
-        public LivroConfiguracao()
+        public ConfiguracaoLivro()
         {
             HasKey(l => l.Id);
 

@@ -18,18 +18,15 @@ namespace Biblioteca.Infra.Dados.Contexto
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
-            //modelBuilder.Properties()
-            //    .Where(p => p.Name == p.ReflectedType + "Id")
-            //    .Configure(p => p.IsKey());
-
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasColumnType("varchar"));
 
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(100));
 
-            modelBuilder.Configurations.Add(new PessoaConfiguracao());
-            modelBuilder.Configurations.Add(new LivroConfiguracao());
+            modelBuilder.Configurations.Add(new ConfiguracaoPessoa());
+            modelBuilder.Configurations.Add(new ConfiguracaoLivro());
+            modelBuilder.Configurations.Add(new ConfiguracaoItenEmprestado());
         }
 
         public override int SaveChanges()
@@ -51,5 +48,7 @@ namespace Biblioteca.Infra.Dados.Contexto
         }
 
         public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Livro> Livros { get; set; }
+        public DbSet<ItemEmprestado> ItenEmprestados { get;set; }
     }
 }

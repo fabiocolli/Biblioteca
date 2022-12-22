@@ -1,0 +1,30 @@
+Primeira parte do prejeto consistiu em criar as classe que irão virar as tabelas do banaco de dados, portanto consistiu nesses passos
+	Na infraestrutura, Dados, Contexto foi craido o contexto que representa como o BD será criado. No contexto eu fiz 
+	algumas configurações no método OnModelCreating a seguir:
+	a) Não pluralizar os nomes das tabelas;
+	b) Não fazer deleção em cascada da chaves estrangeiras para relações de 1 para N;
+	c) Não fazer deleção em cascada da chaves estrangeiras para relações de N para N;
+	d) COnfiguração para toda propriedade string ser convertida para varchar e não para um nvarchar como é opadrão do entity framework
+
+	Sobreescrevi o método SaveChanges para que em toda a entidade que tiver a propriedade DtCdastro, que seja preenchida com a data de hoje
+	Além disso tem os DbSet de cada entidade pra que o EntityFramework reconheça e converte em tabela de banco de dados.
+
+	No domínio para cada entidade foi criado na infreestrutura uma configuração do entidade
+
+	Após tudo isso ou pode ser fazer durante também ahbilitei o Migrations com o comando Enable-Migrations e com o comando 
+	Update-Database eu ia criando as estruturas dno BD. Lembrando que para usar o Migrations é preciso importar o EntityFrameWrok 
+	pra dentro do projeto. Nesse exemplo está dentor Biblioteca.Infra.Dados, mas as entidades estão sempre no domínio
+
+	A string de coneção eu usei no contrutor do conexto por que é um projeto de exemplo, mas o ideal é usar no appsettings.json 
+	da aplicação web.
+
+	Próxima parte. A apresentação nunca conhece o domínio. Então vamos precisar de uma camada de repositório. E para criar 
+	esse repositório, vamos começar pelas interface do domínio, pois são com elas que vamos ligar com as outras camadas. 
+	Sendo primeiro o IRepositorioBase com todos os métodos de CRUD e depois as outras interfaces, herdando de IRepositorioBase
+
+	Em 4 - Infraestrutura, Repositório, criara a classe concreta. E é nessa classe concreta que a implentação do métodos são
+	implementadas, pois estão no contrato do repositório base. 
+	Também é nessa classe concreta ou seja no RepositorioBase, que você deve fazer a referência do contexto, pois é ele que vai 
+	ter o contato com o BD.
+	ALém disso criei os repositórios concretos, herdade do repocitório base concreto e de IRepositorio{Respectivo}
+	Caso você precisa de alguma bisca mais específica em cada classe, essa consulta será feita em cada repositório concreto.

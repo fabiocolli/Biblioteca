@@ -21,9 +21,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bibliteca.Dominio", "Biblit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Dados", "4.1 - Dados", "{B8EA69D9-ED56-4D98-9004-5B9AC5BF3F62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Infra.Dados", "Biblioteca.InfraEstrutura\Biblioteca.Infra.Dados.csproj", "{6B133098-A2DD-44FD-80A3-7BAD68274FE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Infra.Dados", "Biblioteca.InfraEstrutura\Biblioteca.Infra.Dados.csproj", "{6B133098-A2DD-44FD-80A3-7BAD68274FE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Aplicação", "Biblioteca.Aplicação\Biblioteca.Aplicação.csproj", "{02891CBE-C729-4144-8673-33BEB17871C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Aplicação", "Biblioteca.Aplicação\Biblioteca.Aplicação.csproj", "{02891CBE-C729-4144-8673-33BEB17871C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{AB346A2C-F7F3-43EE-9083-D341A14A2982}"
+	ProjectSection(SolutionItems) = preProject
+		Leia-me.txt = Leia-me.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
