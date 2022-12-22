@@ -1,6 +1,6 @@
 ﻿namespace Biblioteca.Web.AutoMapeamento
 {
-    public class AutoMapperConfig
+    public class ConfiguracaoAutoMapeamento
     {
     }
 }
