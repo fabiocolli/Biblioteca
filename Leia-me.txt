@@ -1,3 +1,7 @@
+Nota: Esse projeto ainda está inacabdo e terá modificações. Informo também que é um projeto teste didática para paresentação de técnicas
+que envolvem padrões MVC, Injeção de dependência, desacomplamento de código, mapeamento, entre outros.
+
+
 Primeira parte do prejeto consistiu em criar as classe que irão virar as tabelas do banaco de dados, portanto consistiu nesses passos
 	Na infraestrutura, Dados, Contexto foi craido o contexto que representa como o BD será criado. No contexto eu fiz 
 	algumas configurações no método OnModelCreating a seguir:
