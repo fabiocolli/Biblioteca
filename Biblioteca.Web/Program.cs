@@ -1,3 +1,6 @@
+using AutoMapper;
+using Biblioteca.Web.AutoMapeamento;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,5 +26,13 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+var mapperConfig = new MapperConfiguration(config =>
+{
+    config.AddProfile<ProfileDoMapeamentoDominioParaView>();
+    config.AddProfile<ProfileDoMapeamentoViewParaDominio>();
+});
+
+mapperConfig.CreateMapper();
 
 app.Run();

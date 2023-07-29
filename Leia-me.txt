@@ -34,3 +34,7 @@ Primeira parte do prejeto consistiu em criar as classe que irão virar as tabelas
 	Caso você precisa de alguma bisca mais específica em cada classe, essa consulta será feita em cada repositório concreto.
 
 	Install-Package AutoMapper
+
+	Comandos Migrations
+	* Enable-Migrations
+	* Update-Database -Verbose

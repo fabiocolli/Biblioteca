@@ -7,7 +7,7 @@ namespace Biblioteca.Infra.Dados.Contexto
 {
     public class BibliotecaContext : DbContext
     {
-        public BibliotecaContext() : base("Data Source=FABIO_COLLI\\SQLEXPRESS01;Initial Catalog=Biblioteca;Integrated Security=True")
+        public BibliotecaContext() : base("Data Source=fc-p\\local;Initial Catalog=Biblioteca;Integrated Security=True")
         {
 
         }
